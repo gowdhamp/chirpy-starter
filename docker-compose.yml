@@ -1,0 +1,16 @@
+# Filename: /srv/notes.gowdhamp.in/docker-compose.yml
+# Purpose: To serve obsidian docs into https://notes.gowdhamp.in/
+
+version: "2.4"
+
+services:
+  notes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: always
+    container_name: notes.gowdhamp.in
+
+    ports:
+      - "8080:80"
